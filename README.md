@@ -10,4 +10,8 @@
 
 ### Packages
   #### 1. Create unique ID
-    npm i --save uuid
+    npm install --save-dev @types/uuid
+
+  #### Import
+    import { v4 as uuid } from 'uuid';
+    const id: string = uuid();
