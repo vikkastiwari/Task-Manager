@@ -11,6 +11,8 @@
 ### Packages
   #### 1. Create unique ID
     npm install --save-dev @types/uuid
+  #### 2. Add validation dependencies
+    npm install class-validator class-transformer --save
 
   #### Import
     import { v4 as uuid } from 'uuid';
