@@ -13,7 +13,17 @@
     npm install --save-dev @types/uuid
   #### 2. Add validation dependencies
     npm install class-validator class-transformer --save
+  #### 3. Add TypeORM - postgres
+    npm install --save @nestjs/typeorm typeorm pg
+  #### 4. Config Module
+    npm i --save @nestjs/config
 
   #### Import
     import { v4 as uuid } from 'uuid';
     const id: string = uuid();
+
+### References
+  #### 1. Class validator
+    https://github.com/typestack/class-validator#validation-decorators
+  #### 2. TypeORM
+    https://typeorm.io/
