@@ -27,3 +27,7 @@
     https://github.com/typestack/class-validator#validation-decorators
   #### 2. TypeORM
     https://typeorm.io/
+  #### 3. Custom Repository
+    https://github.com/typeorm/typeorm/blob/master/docs/custom-repository.md
+  #### 4. Repository Class
+    http://typeorm.delightful.studio/classes/_repository_repository_.repository.html
