@@ -21,3 +21,5 @@
 ### References
   #### 1. Class validator
     https://github.com/typestack/class-validator#validation-decorators
+  #### 2. TypeORM
+    https://typeorm.io/
