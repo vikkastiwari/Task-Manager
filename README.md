@@ -17,3 +17,7 @@
   #### Import
     import { v4 as uuid } from 'uuid';
     const id: string = uuid();
+
+### References
+  #### 1. Class validator
+    https://github.com/typestack/class-validator#validation-decorators
