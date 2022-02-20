@@ -15,6 +15,8 @@
     npm install class-validator class-transformer --save
   #### 3. Add TypeORM - postgres
     npm install --save @nestjs/typeorm typeorm pg
+  #### 4. Config Module
+    npm i --save @nestjs/config
 
   #### Import
     import { v4 as uuid } from 'uuid';
