@@ -19,6 +19,7 @@ export class TaskStatusValidationPipe implements PipeTransform{
     }
 
     private isStatusAllowed( status: any ) {
+        // if provided status is not available in allowedStatus array then it will return -1
         const idx = this.allowedStatus.indexOf( status );
         return idx !== -1;
     }
