@@ -4,3 +4,5 @@
     nest g controller auth --no-spec
 #### Auth Service
     nest g service auth --no-spec
+#### Install Bcrypt NPM Package
+    npm install bcrypt --save
