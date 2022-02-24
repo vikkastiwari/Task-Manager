@@ -31,3 +31,5 @@
     https://github.com/typeorm/typeorm/blob/master/docs/custom-repository.md
   #### 4. Repository Class
     http://typeorm.delightful.studio/classes/_repository_repository_.repository.html
+  #### 5. Eager and Lazy Relations
+    https://orkhan.gitbook.io/typeorm/docs/eager-and-lazy-relations
