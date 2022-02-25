@@ -37,3 +37,9 @@
     https://orkhan.gitbook.io/typeorm/docs/eager-and-lazy-relations
   #### 6. Logger
     https://docs.nestjs.com/techniques/logger
+
+### Configuration Correction
+    npm i passport-local --save
+    
+#### Import for Strategy
+    import { Strategy } from "passport-local";
