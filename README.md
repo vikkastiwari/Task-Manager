@@ -17,6 +17,8 @@
     npm install --save @nestjs/typeorm typeorm pg
   #### 4. Config Module
     npm i --save @nestjs/config
+  #### 5. Configuration Module
+    npm i config --save
 
   #### Import
     import { v4 as uuid } from 'uuid';
