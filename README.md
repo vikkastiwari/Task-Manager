@@ -17,6 +17,8 @@
     npm install --save @nestjs/typeorm typeorm pg
   #### 4. Config Module
     npm i --save @nestjs/config
+  #### 5. Configuration Module
+    npm i config --save
 
   #### Import
     import { v4 as uuid } from 'uuid';
@@ -35,3 +37,10 @@
     https://orkhan.gitbook.io/typeorm/docs/eager-and-lazy-relations
   #### 6. Logger
     https://docs.nestjs.com/techniques/logger
+
+### Configuration Correction
+  #### Install 
+      npm i passport-local --save
+
+  #### Import for Strategy
+      import { Strategy } from "passport-local";
