@@ -4,11 +4,12 @@ import { TaskRepository } from './task.repository';
 import { TasksService } from './tasks.service';
 import { Test } from '@nestjs/testing';
 
-const mockUser = { username: 'Test user' };
+const mockUser = { id:12, username: 'Test user' };
 
 const mockTaskRepository = () => ( {
     // mock function
     getTasks: jest.fn(),
+    findOne: jest.fn(),
 })
 
 describe('TasksService',()=>{
@@ -49,6 +50,29 @@ describe('TasksService',()=>{
             expect( taskRepository.getTasks ).toHaveBeenCalled();
 
             expect( result ).toBe( 'someValue' );
-        })
-    })
-})
+        });
+    });
+    describe('getTaskById', () => { 
+       it('calls taskRepository.findOne() and successfuly retrieve and return the task',async()=>{
+           const mockTask = {title:'Title task', description:'Test desc'};
+           taskRepository.findOne.mockResolvedValue(mockTask);
+
+           const result = await tasksService.getTaskById(1,mockUser);
+
+           expect( result ).toEqual( mockTask );
+           
+        //    check return value
+           expect( taskRepository.findOne ).toHaveBeenCalledWith( {
+               where: {
+                   id: 1,
+                   userId: mockUser.id,
+               },
+           });
+       });
+
+       it('throws an error as task is not found',()=>{
+           taskRepository.findOne.mockRejectedValue( null );
+           expect( tasksService.getTaskById( 1, mockUser ) ).rejects.toThrow();
+       })
+    });
+});
