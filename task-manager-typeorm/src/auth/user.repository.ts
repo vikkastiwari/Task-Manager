@@ -9,7 +9,12 @@ export class UserRepository extends Repository<User>{
     async signUp(authCredentialsDto:AuthCredentialsDto):Promise<void> {
         const { username, password } = authCredentialsDto;
 
-        const user = new User();
+        // This line for creation of user entity is not testable as we are creating object here and it can not be mocked.
+        // const user = new User();
+
+        // So we create it in this manner
+        const user = this.create();
+
         user.username = username;
         user.salt = await bcrypt.genSalt();
         user.password = await this.hashPassword(password,user.salt);
